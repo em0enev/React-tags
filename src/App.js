@@ -5,12 +5,13 @@ import { useState } from "react"
 function App() {
   const [text, setText] = useState("");
 
-  function saveToLocalStorage(text){
-    localStorage.setItem(text, text)
+  function saveToLocalStorage(text) {
+    localStorage.setItem("text", text)
+    setText("")
     console.log(localStorage.text)
   }
 
-  function clearLocalStorage(){
+  function clearLocalStorage() {
     localStorage.clear();
     setText("");
   }
