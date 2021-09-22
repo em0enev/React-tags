@@ -6,7 +6,7 @@ function App() {
   const [text, setText] = useState("");
 
   function saveToLocalStorage(text){
-    localStorage.setItem("text", text)
+    localStorage.setItem(text, text)
     console.log(localStorage.text)
   }
 
