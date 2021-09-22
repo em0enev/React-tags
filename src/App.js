@@ -6,8 +6,8 @@ function App() {
   const [text, setText] = useState("");
 
   function saveToLocalStorage(text){
-    localStorage.setItem("msg", text)
-    console.log(localStorage.msg)
+    localStorage.setItem("text", text)
+    console.log(localStorage.text)
   }
 
   function clearLocalStorage(){
