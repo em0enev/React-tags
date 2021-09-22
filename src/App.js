@@ -3,17 +3,18 @@ import { useState } from "react"
 
 
 function App() {
-  const [text, setText] = useState("");
+  let textFromLs = localStorage.getItem("text")
+
+  const [text, setText] = useState(textFromLs ? textFromLs : "");
 
   function saveToLocalStorage(text) {
     localStorage.setItem("text", text)
-    setText("")
     console.log(localStorage.text)
   }
 
   function clearLocalStorage() {
     localStorage.clear();
-    setText("");
+    setText("")
   }
 
   return (
